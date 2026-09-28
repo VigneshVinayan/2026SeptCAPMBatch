@@ -1,0 +1,153 @@
+POST http://localhost:4004/odata/v4/catalog/createEmployee
+Content-Type: application/json
+ 
+{
+  "Currency_code": "USD",
+  "ID": "66666",
+  "accountNumber": "1234567890123456",
+  "bankId": "HDFC0000123456",
+  "bankName": "HDFC Bank",
+  "email": "john.doe@example.com",
+  "gender": "M",
+  "language": "EN",
+  "loginName": "jdoe",
+  "nameFirst": "John",
+  "nameInitials": "J.D.",
+  "nameLast": "Doe",
+  "nameMiddle": "Michael",
+  "phoneNumber": "+919876543210",
+  "salaryAmount": "750000.00"
+}
+###
+
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemSrv
+Content-Type: application/json
+
+{
+    "PRICE" : "1000000.00"
+
+}
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/
+Content-Type: application/json
+
+{
+  "salaryAmount" : "105000.00",
+  "Currency_code" : "USD"
+}
+###
+PUT http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+Content-Type:application/json
+
+{
+  "phoneNumber" : "+919409318667"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type:application/json
+
+{
+  "GROSS_AMOUNT" : 50001,
+  "CURRENCY_code" : "USD"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/AddressSrv/74867AD200E41EDBA5D8B06885664052
+Content-Type: application/json
+
+{
+  "COUNTRY" : "DE"
+}
+
+###
+PUT http://localhost:4004/odata/v4/catalog/BusinessPartnerSrv/11111111-1111-1111-1111-111111111111
+Content-Type: application/json
+
+{
+  "COMPANY_NAME" : "_._"
+}
+###
+PUT http://localhost:4004/odata/v4/catalog/PurchaseItemSrv/74867AD200E41EDBA5D8B0CBD35A0052
+Content-Type: application/json
+
+{
+  "PO_ITEM_POS" : 4
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductionSrv?$filter=CATEGORY eq 'Notebooks'&DIM_UNIT eq 'CM'
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductionSrv?$select=PRODUCT_ID,DESCRIPTION,CATEGORY,PRICE
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductionSrv?$orderby=PRODUCT_ID desc
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductionSrv('74867AD200E41EDBA5D8B06B26EE8052')/PRODUCT_ID
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv?$expand=Items
+
+
+
+###
+###
+Send Request
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv
+Content-Type: application/json
+
+{
+  "Currency_code": "USD",
+  "ID": "2e5776ec-e711-4c11-a92e-2da5b46c11b8",
+  "accountNumber": null,
+  "bankId": null,
+  "bankName": null,
+  "email": null,
+  "gender": "M",
+  "language": "E",
+  "loginName": "RAMAM",
+  "nameFirst": "Rama",
+  "nameInitials": null,
+  "nameLast": "Murthy",
+  "nameMiddle": null,
+  "phoneNumber": "(+1) 9898989898",
+  "salaryAmount": "45000.00"
+}
+
+###
+GET http://localhost:4004/odata/v4/catalog/getHeighestPricedProduct()
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC2A052/discountPrice
+Content-Type: application/json
+
+###
+GET http://localhost:4004/odata/v4/catalog/PurchaseOrderSrv/74867AD200E41EDBA5D8B0C98DC2A052/largestOrder
+
+###
+GET http://localhost:4004/odata/v4/catalog/EmployeeSrv
+
+###
+POST http://localhost:4004/odata/v4/catalog/ProductionSrv/46df4857-6aa0-44ef-87e6-203754d0d3de/CatalogService.increasePrice
+
+###
+GET http://localhost:4004/odata/v4/catalog/ProductionSrv/46df4857-6aa0-44ef-87e6-203754d0d3de/CatalogService.top20Products
+
+
+###
+POST http://localhost:4004/odata/v4/catalog/EmployeeSrv/02BD2137-0890-1EEA-A6C2-BB55C19787FB/CatalogService.increaseSalary
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/top20HighestPaidEmployees
+
+
+###
+GET http://localhost:4004/odata/v4/catalog/getUtilities()

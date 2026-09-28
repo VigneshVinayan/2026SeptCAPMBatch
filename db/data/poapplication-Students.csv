@@ -1,0 +1,3 @@
+studentId,studentName,fatherName,motherName,contactNo,class_classId,fee,currency_code,city,country_code,validFrom,validTo,email
+1,Vignesh Kumar,Kumar Raj,Lakshmi Kumar,9876543210,101,25000,INR,Bangalore,IN,2026-01-01T00:00:00Z,9999-12-31T23:59:59Z,abc@gmail.com
+2,Priya Sharma,Rajesh Sharma,Sunita Sharma,9876543211,102,28000,INR,Mysore,IN,2026-01-01T00:00:00Z,9999-12-31T23:59:59Z,xyz123@gmail.com
